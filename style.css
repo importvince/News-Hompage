@@ -27,7 +27,7 @@
     font: inherit;
 }
 
-html { 
+html {
     color-scheme: light;
 }
 
@@ -81,7 +81,7 @@ select {
 
 body {
     min-height: 100vh;
-    padding: 50px 100px;
+    padding: 3% 10%; /* huge learning moment here with % for responsive layouts */
     font-family: var(--ff-primary);
     font-weight: var(--fw-small);
     font-size: var(--fs-par);
@@ -94,6 +94,7 @@ body {
 }
 
 #header-container {
+    background-color: hsl(var(--clr-secondary-white));
     grid-area: header;
     display: flex;
     justify-content: space-between;
@@ -102,15 +103,128 @@ body {
     gap: 20px;
 }
 
-#header-container > img {
+#header-container img {
     width: 50px;
     margin-left: -5px;
 }
 
-#header-container > ul {
+.image {
+    flex-shrink: 0;
+}
+
+.header-links  ul {
     display: flex;
     list-style-type: none;
     gap: 25px;
+}
+
+.menu-item {
+    color: hsl(var(--clr-secondary-dark-blue-gray));
+    text-decoration: none;
+    font-size: var(--fs-par);
+    display: block;
+}
+
+.menu-item:hover {
+    color: hsl(var(--clr-primary-red));
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: hsl(var(--clr-secondary-dark-blue));
+}
+
+.x-button {
+    position: absolute;
+    right: .05rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotate(45deg);
+    text-decoration: none;
+    font-size: 63px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(var(--clr-secondary-dark-blue));
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .active-toggle {
+        display: none;
+    }
+
+    .x-button {
+        display: none;
+    }
+
+    .active-x {
+        display: flex;
+    }
+
+    .header-links {
+         display: none;
+         width: 250px;
+         height: 100%;
+         position: absolute;
+         top: 0px;
+         right: 0;
+         background: hsl(var(--clr-secondary-white));
+    }
+
+    .active-header {
+        display: flex;
+    }
+
+    .header-links ul {
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+        padding-left: 50px;;
+        padding-top: 100px;
+    }
+
+    .overlay-text li {
+        color: hsl(var(--clr-secondary-dark-blue));
+    }
+
+    .overlay-middle {
+        z-index: 3; 
+        background: hsl(var(--clr-secondary-white));
+        /* mention z-index in learning */
+    }
+
+    .overlay-top {
+        z-index: 4;
+    }
+
+    .dimmer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vh;
+        z-index: 1;
+        background-color:hsl(var(--clr-secondary-dark-blue));
+        opacity: 0.5;
+    }
+    /* add dimmer to learning section */
+
+    /* Need to add background dimmer. Possible solution: https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu */
 }
 
 #main-section-text {
@@ -144,7 +258,7 @@ body {
     padding: 20px;
 }
 
-#sidebar > h2 {
+#sidebar h2 {
     font-weight: var(--fw-700);
     font-size: 30px;
     letter-spacing: 1px;
@@ -157,8 +271,7 @@ body {
     margin-top: 20px;
 }
 
-#section-01,
-#section-02 {
+#section-01, {
     border-bottom: 1px solid rgba(255, 255, 255, 0.342);
     padding-bottom: 20px;
 
@@ -170,13 +283,14 @@ body {
     gap: 1.5rem;
     height: 100px;
     padding-bottom: 200px;
+    margin-top: 30px;
 }
 
 #footer-one,
 #footer-two,
 #footer-three {
     display: grid;
-    grid-template-columns: 80px 200px;
+    grid-template-columns: 100px 250px;
     gap: 1.5rem;
     align-items: center;
 }
@@ -194,21 +308,21 @@ body {
 
 /* font sizing */
 
-section > h3,
-.footer-text > h3 {
+section h3,
+.footer-text h3 {
     font-weight: var(--fw-700);
     font-size: var(--fs-above-par);
 }
 
-#main-section-text > h1 {
+#main-section-text h1 {
     font-size: var(--fs-h1);
 }
 
-.footer-text > span {
+.footer-text span {
     font-size: var(--fs-span);
 }
 
-.footer-text > h3 {
+.footer-text h3 {
     font-weight: var(--fw-700);
     font-size: var(--fs-above-par);
 }
@@ -246,3 +360,5 @@ section > h3,
 .clr-secondary-gray {
     color: hsl(var(--clr-secondary-gray));
 }
+
+

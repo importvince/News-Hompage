@@ -81,7 +81,7 @@ select {
 
 body {
     min-height: 100vh;
-    padding: 3% 10%; /* huge learning moment here with % for responsive layouts */
+    padding: 3% 10%;
     font-family: var(--ff-primary);
     font-weight: var(--fw-small);
     font-size: var(--fs-par);
@@ -114,7 +114,6 @@ body {
 
 #footer-one {
     grid-area: footer1;
-    /* gap: 1rem; */
 }
 
 #footer-two {
@@ -149,7 +148,6 @@ body {
 
     #footer-one {
         grid-area: footer1;
-        /* gap: 1rem; */
     }
 
     #footer-two {
@@ -189,7 +187,6 @@ body {
 
     #footer-one {
         grid-area: footer1;
-        /* gap: 1rem; */
     }
 
     #footer-two {
@@ -332,7 +329,6 @@ body {
         background-color:hsl(var(--clr-secondary-dark-blue));
         opacity: 0.5;
     }
-    /* add dimmer to learning section  solution: https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu */
 }
 
 #main-section-text {
@@ -340,7 +336,6 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     margin-top: 1.5rem;
-    /* margin-right: 10px */
 }
 
 @media (min-width: 600px) {
@@ -371,8 +366,6 @@ body {
 
 #sidebar {
     padding: 20px;
-    /* max-height: 800px; */
-    /* min-width: 100px; */
 }
 
 #sidebar h2 {
@@ -403,16 +396,6 @@ body {
     margin-top: 100px;
 }
 
-/* @media (min-width: 700px) {
-}
-
-@media (min-width: 600px) {
-    #footer {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-} */
-
 .footer-img {
     width: 125px;
 }
@@ -427,17 +410,6 @@ body {
     justify-content: space-between;
     gap: 1.5rem;
 }
-
-
-/* grid sizings */
-
-/* .grid-col-span-2 {
-    grid-column: span 2;
-}
-
-.grid-col-span-3 {
-    grid-column: span 3;
-} */
 
 /* font sizing */
 

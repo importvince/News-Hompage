@@ -90,7 +90,115 @@ body {
 #body-container {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    'image'
+    'section'
+    'sidebar'
+    'footer1'
+    'footer2'
+    'footer3';
+}
+
+#main-image {
+    grid-area: image;
+}
+
+#main-section-text {
+    grid-area: section;
+}
+
+#sidebar {
+    grid-area: sidebar;
+}
+
+#footer-one {
+    grid-area: footer1;
+    /* gap: 1rem; */
+}
+
+#footer-two {
+    grid-area: footer2;
+}
+
+#footer-three {
+    grid-area: footer3;
+}
+
+@media (min-width: 900px) {
+    #body-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'image image sidebar'
+        'section section sidebar'
+        'footer1 footer2 footer3';   
+    }
+
+    #main-image {
+        grid-area: image;
+    }
+
+    #main-section-text {
+        grid-area: section;
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+    }
+
+    #footer-one {
+        grid-area: footer1;
+        /* gap: 1rem; */
+    }
+
+    #footer-two {
+        grid-area: footer2;
+    }
+
+    #footer-three {
+        grid-area: footer3;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+
+    #body-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'image image'
+        'section section' 
+        'sidebar sidebar'
+        'footer1 footer2'
+        'footer3 .';   
+    }
+
+    #main-image {
+        grid-area: image;
+    }
+
+    #main-section-text {
+        grid-area: section;
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+    }
+
+    #footer-one {
+        grid-area: footer1;
+        /* gap: 1rem; */
+    }
+
+    #footer-two {
+        grid-area: footer2;
+    }
+
+    #footer-three {
+        grid-area: footer3;
+    }
 }
 
 #header-container {
@@ -222,19 +330,24 @@ body {
         background-color:hsl(var(--clr-secondary-dark-blue));
         opacity: 0.5;
     }
-    /* add dimmer to learning section */
-
-    /* Need to add background dimmer. Possible solution: https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu */
+    /* add dimmer to learning section  solution: https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu */
 }
 
 #main-section-text {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     margin-top: 1.5rem;
+    /* margin-right: 10px */
 }
 
-#main-section-text > h1 {
+@media (min-width: 600px) {
+    #main-section-text {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#main-section-text h1 {
     font-weight: var(--fw-biggest);
     line-height: 1;
 }
@@ -256,6 +369,8 @@ body {
 
 #sidebar {
     padding: 20px;
+    /* max-height: 800px; */
+    /* min-width: 100px; */
 }
 
 #sidebar h2 {
@@ -271,19 +386,33 @@ body {
     margin-top: 20px;
 }
 
-#section-01, {
+#section-01,
+#section-02 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.342);
     padding-bottom: 20px;
-
 }
 
-#footer {
+ #footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
     height: 100px;
     padding-bottom: 200px;
-    margin-top: 30px;
+    margin-top: 100px;
+}
+
+/* @media (min-width: 700px) {
+}
+
+@media (min-width: 600px) {
+    #footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+} */
+
+.footer-img {
+    width: 125px;
 }
 
 #footer-one,
@@ -291,20 +420,22 @@ body {
 #footer-three {
     display: grid;
     grid-template-columns: 100px 250px;
-    gap: 1.5rem;
     align-items: center;
+    width: 350px;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 
 /* grid sizings */
 
-.grid-col-span-2 {
+/* .grid-col-span-2 {
     grid-column: span 2;
 }
 
 .grid-col-span-3 {
     grid-column: span 3;
-}
+} */
 
 /* font sizing */
 

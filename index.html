@@ -44,19 +44,21 @@
 
   <div id="body-container">
 
-    <main class="grid-col-span-2">
-      <img src="assets/images/image-web-3-desktop.jpg">
+    <!-- <main id='main' class="grid-col-span-2"> -->
+      <img id='main-image' src="assets/images/image-web-3-desktop.jpg">
       <div id="main-section-text">
-          <h1 class="clr-secondary-dark-blue-text">The Bright Future of Web 3.0?</h1>
-          <div id="main-preview">
-              <p class="clr-secondary-dark-blue-gray">
+        <div class="main-heading">
+          <h1 class="clr-secondary-dark-blue-text">The Bright Future of Web 3.0?</h1> 
+        </div>
+        <div id="main-preview">
+          <p class="clr-secondary-dark-blue-gray">
                   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
                   But is it really fulfilling its promise?
-              </p>
-              <button class="clr-primary-red clr-secondary-white-text button">  READ MORE</button>
-          </div>
+          </p>
+          <button class="clr-primary-red clr-secondary-white-text button">  READ MORE</button>
+        </div>
       </div>
-    </main>
+    <!-- </main> -->
 
     <sidebar class="clr-secondary-dark-blue-bg" id="sidebar">
       <h2 class="clr-primary-orange">New</h2>
@@ -79,9 +81,9 @@
       </div>
     </sidebar>
 
-    <footer id="footer" class="grid-col-span-3">
+    <!-- <footer id="footer" class="grid-col-span-3"> -->
       <div id="footer-one">
-            <img src="assets/images/image-retro-pcs.jpg">
+            <img src="assets/images/image-retro-pcs.jpg" class="footer-img">
             <div class="footer-text">
                       <span class="clr-secondary-gray">01</span>
                       <h3 class="clr-secondary-dark-blue-text">Reviving Retro PCs</h3>
@@ -90,7 +92,7 @@
       </div>
         
       <div id="footer-two">
-            <img src="assets/images/image-top-laptops.jpg">
+            <img src="assets/images/image-top-laptops.jpg" class="footer-img">
             <div class="footer-text">
                       <span class="clr-secondary-gray">02</span>
                       <h3 class="clr-secondary-dark-blue-text">Top 10 Laptops of 2022</h3>
@@ -99,14 +101,14 @@
       </div>
         
       <div id="footer-three">
-            <img src="assets/images/image-gaming-growth.jpg">
+            <img src="assets/images/image-gaming-growth.jpg" class="footer-img">
             <div class="footer-text">
                       <span class="clr-secondary-gray">03</span>
                       <h3 class="clr-secondary-dark-blue-text">The Growth of Gaming</h3>
                       <p class="clr-secondary-dark-blue-gray">How the pandemic has sparked fresh opportunities.</p>
             </div >
       </div>
-    </footer>
+    <!-- </footer> -->
 
   </div>
 
@@ -114,18 +116,6 @@
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="#">Your Name Here</a>.
 </div>
-
-
-<script>
-  function myFunction() {
-    const hamburgerMenu = document.getElementById("header-links");
-    if (hamburgerMenu.display === "block") {
-      hamburgerMenu.display = "none";
-    } else {
-      hamburgerMenu.display = "block";
-    }
-  }
-</scrip>
   
 </body>
 </html>

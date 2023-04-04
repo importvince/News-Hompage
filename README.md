@@ -46,8 +46,8 @@ And here's my mobile menu
 
 ### Links
 
-- Solution URL: [](https://github.com/importvince/News-Hompage)
-- Live Site URL: [](https://importvince.github.io/News-Hompage/)
+- Solution URL: [solution](https://github.com/importvince/News-Hompage)
+- Live Site URL: [live site](https://importvince.github.io/News-Hompage/)
 
 ## My process
 
@@ -65,13 +65,13 @@ Oh man, where to start.
 
 1. How to build mobile first using media queries
 
-2. How to get CSS Grid to work and be responsive, even if it meant rewriting everything. S/O to Kevin Powell on Youtube [](https://www.youtube.com/watch?v=rg7Fvvl3taU&t) and this article saved my life [](https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe)
+2. How to get CSS Grid to work and be responsive, even if it meant rewriting everything. S/O to Kevin Powell on Youtube [Kevin Powell](https://www.youtube.com/watch?v=rg7Fvvl3taU&t) and this article saved my life [source](https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe)
 
 3. Kevin Powell also showed me how to initialize variables in CSS for efficiency when working from a given design
 
-4. How to create a mobile hamburger menu from scratch. S/O Web Sev Simplified on Youtube [](https://www.youtube.com/watch?v=At4B7A4GOPg)
+4. How to create a mobile hamburger menu from scratch. S/O Web Sev Simplified on Youtube [Web Dev Simplified](https://www.youtube.com/watch?v=At4B7A4GOPg)
 
-5. How to dim the background when you click the mobile menu [](https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu)
+5. How to dim the background when you click the mobile menu [source](https://stackoverflow.com/questions/60228488/mobile-menu-css-div-dim-visible-background-around-menu)
 
 6. How to make my own icons through the use of empty spans (hamburger menu) and skewX/skewY on letters or symbols (+ used for X on menu)
 

@@ -270,6 +270,7 @@ body {
 @media (max-width: 600px) {
     .toggle-button {
         display: flex;
+        position: fixed;
     }
 
     .active-toggle {
@@ -282,14 +283,15 @@ body {
 
     .active-x {
         display: flex;
+        position: fixed;
     }
 
     .header-links {
          display: none;
-         width: 250px;
-         height: 100%;
-         position: absolute;
-         top: 0px;
+         width: 300px;
+         height: 2000px;
+         position: fixed;
+         top: 0;
          right: 0;
          background: hsl(var(--clr-secondary-white));
     }
